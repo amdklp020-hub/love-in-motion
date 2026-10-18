@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #030106;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+    text-align: center;
+}
+
+.background-glow {
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    background: #8b0055;
+    filter: blur(150px);
+    opacity: 0.25;
+
+    pointer-events: none;
+}
+
+h1 {
+    font-size: clamp(25px, 5vw, 44px);
+    letter-spacing: 7px;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 10px #ff4fa3,
+        0 0 35px #ff1687;
+
+    margin-top: 5px;
+}
+
+h1 span {
+    color: #ff85c2;
+}
+
+.subtitle {
+    margin-top: 15px;
+
+    color: #bda1bc;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#loveCanvas {
+    display: block;
+
+    width: min(95vw, 650px);
+    height: min(65vh, 570px);
+
+    touch-action: manipulation;
+}
+
+.message {
+    color: #e9a0c9;
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    margin-top: -5px;
+}
+
+.small-heart {
+    color: #ff278f;
+    margin: 0 8px;
+
+    text-shadow: 0 0 12px #ff1687;
+}
+
+button {
+    margin-top: 22px;
+
+    padding: 13px 28px;
+
+    background: rgba(255, 30, 130, 0.08);
+    border: 1px solid #ff4fa3;
+    border-radius: 40px;
+
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 18px rgba(255, 30, 130, 0.2);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff278f;
+    box-shadow: 0 0 30px #ff278f;
+
+    transform: scale(1.06);
+}
+
+@media (max-height: 650px) {
+    #loveCanvas {
+        height: 55vh;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        margin-top: 8px;
+    }
+
+    button {
+        margin-top: 12px;
+    }
+}
